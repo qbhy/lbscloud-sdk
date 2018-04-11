@@ -1,0 +1,11 @@
+{
+    "name": "96qbhy/lbscloud-sdk",
+    "description": "LBS.云 PHP SDK",
+    "authors": [
+        {
+            "name": "96qbhy",
+            "email": "96qbhy@gmail.com"
+        }
+    ],
+    "require": {}
+}
