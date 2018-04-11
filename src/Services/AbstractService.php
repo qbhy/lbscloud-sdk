@@ -18,7 +18,7 @@ abstract class AbstractService
         'v3', 'v4',
     ];
 
-    const DEFAULT_VERSION = 'v3';
+    protected $use_version = 'v3';
 
     /** @var Api */
     protected $api;
@@ -28,9 +28,21 @@ abstract class AbstractService
         $this->api = $cloud->api;
     }
 
-    public function request($method, $params = [], $fn = '', $version = self::DEFAULT_VERSION)
+    public function request($method = 'GET', $fn = '', $params = [], $version = null)
     {
-        return $this->api->request(static::SERVICE, $version, $fn, $method, $params);
+        return $this->api->request(static::SERVICE, $version ?? $this->use_version, $fn, $method, $params);
+    }
+
+    /**
+     * @param string $use_version
+     *
+     * @return static
+     */
+    public function setUseVersion(string $use_version): self
+    {
+        $this->use_version = $use_version;
+
+        return $this;
     }
 
 

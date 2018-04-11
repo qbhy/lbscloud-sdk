@@ -9,12 +9,11 @@ namespace Qbhy\LBSCloud\Services;
 
 class RGCService extends AbstractService
 {
-    const DEFAULT_VERSION = 'v1';
+    protected $use_version = 'v1';
 
     const VERSIONS = ['v1'];
 
     const SERVICE = 'cloudrgc'; // 云逆地理编码服务
 
-    
 
 }

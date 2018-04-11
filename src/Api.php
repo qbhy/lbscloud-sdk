@@ -18,6 +18,9 @@ class Api extends AbstractAPI
     /** @var string 请求 ak */
     protected $ak;
 
+    const API_SERVICE_GC  = 'cloudgc';   // 云地理编码服务
+    const API_SERVICE_RGC = 'cloudrgc';  //
+
     const API_HOST = 'http://api.map.baidu.com';
 
     public static $default_params = [];
@@ -28,11 +31,18 @@ class Api extends AbstractAPI
         static::$default_params = ['ak' => $this->ak];
     }
 
-    public function request($service, $version, $fn = '', $method = 'GET', $params = [])
-    {
-        $url = "{$this::API_HOST}/$service/$version/$fn";
+    public function request(
+        string $service,
+        string $version,
+        string $fn = '',
+        string $method = 'GET',
+        array $params = []
+    ) {
+        $url = $this::API_HOST . "/$service/$version/$fn";
 
-        $option_name = $method === 'GET' ? RequestOptions::QUERY : RequestOptions::FORM_PARAMS;
+        $method = strtolower($method);
+
+        $option_name = $method === 'get' ? RequestOptions::QUERY : RequestOptions::FORM_PARAMS;
 
         $options = [$option_name => array_merge(static::$default_params, $params)];
 
@@ -44,6 +54,5 @@ class Api extends AbstractAPI
 
         return json_decode(strval($response->getBody()), true);
     }
-
 
 }

@@ -9,12 +9,11 @@ namespace Qbhy\LBSCloud\Services;
 
 class SearchService extends AbstractService
 {
-    const DEFAULT_VERSION = 'v3';
+    protected $use_version = 'v3';
 
     const VERSIONS = ['v3'];
 
     const SERVICE = 'geosearch'; // 云检索服务服务
 
-    
 
 }
