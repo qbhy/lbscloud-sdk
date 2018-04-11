@@ -18,9 +18,6 @@ class Api extends AbstractAPI
     /** @var string 请求 ak */
     protected $ak;
 
-    const API_SERVICE_GC     = 'cloudgc';   // 云地理编码服务
-    const API_SERVICE_RGC    = 'cloudrgc';  //
-
     const API_HOST = 'http://api.map.baidu.com';
 
     public static $default_params = [];

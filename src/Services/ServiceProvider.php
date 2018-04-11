@@ -20,6 +20,18 @@ class ServiceProvider implements ServiceProviderInterface
             return new StorageService($cloud);
         };
 
+        $pimple['rgc'] = function (LBSCloud $cloud) {
+            return new RGCService($cloud);
+        };
+
+        $pimple['gc'] = function (LBSCloud $cloud) {
+            return new GCService($cloud);
+        };
+
+        $pimple['search'] = function (LBSCloud $cloud) {
+            return new SearchService($cloud);
+        };
+
     }
 
 }
