@@ -7,6 +7,13 @@
 
 namespace Qbhy\LBSCloud\Services;
 
+/**
+ * Class StorageService
+ *
+ * @link http://lbsyun.baidu.com/index.php?title=lbscloud/api/geodataV3
+ * @link http://lbsyun.baidu.com/index.php?title=lbscloud/api/geodataV4
+ * @package Qbhy\LBSCloud\Services
+ */
 class StorageService extends AbstractService
 {
     protected $use_version = 'v3';

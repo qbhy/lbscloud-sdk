@@ -7,6 +7,12 @@
 
 namespace Qbhy\LBSCloud\Services;
 
+/**
+ * Class GCService
+ *
+ * @link http://lbsyun.baidu.com/index.php?title=lbscloud/cloudgc/explain
+ * @package Qbhy\LBSCloud\Services
+ */
 class GCService extends AbstractService
 {
     protected $use_version = 'v1';

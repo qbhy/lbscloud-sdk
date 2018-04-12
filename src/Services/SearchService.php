@@ -7,6 +7,11 @@
 
 namespace Qbhy\LBSCloud\Services;
 
+/**
+ * Class SearchService
+ * @link http://lbsyun.baidu.com/index.php?title=lbscloud/api/geosearch
+ * @package Qbhy\LBSCloud\Services
+ */
 class SearchService extends AbstractService
 {
     protected $use_version = 'v3';

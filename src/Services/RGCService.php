@@ -7,6 +7,12 @@
 
 namespace Qbhy\LBSCloud\Services;
 
+/**
+ * Class RGCService
+ *
+ * @link http://lbsyun.baidu.com/index.php?title=lbscloud/yunni/explain
+ * @package Qbhy\LBSCloud\Services
+ */
 class RGCService extends AbstractService
 {
     protected $use_version = 'v1';
