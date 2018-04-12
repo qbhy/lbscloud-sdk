@@ -5,11 +5,13 @@
  * Time: 下午4:47
  */
 
-namespace Qbhy\LBSCloud\Services;
+namespace Qbhy\LBSCloud\Services\LBS;
+
+use Qbhy\LBSCloud\Services\AbstractService;
 
 /**
  * Class SearchService
- * @link http://lbsyun.baidu.com/index.php?title=lbscloud/api/geosearch
+ * @link    http://lbsyun.baidu.com/index.php?title=lbscloud/api/geosearch
  * @package Qbhy\LBSCloud\Services
  */
 class SearchService extends AbstractService

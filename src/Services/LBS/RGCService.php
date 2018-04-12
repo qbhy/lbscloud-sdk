@@ -5,7 +5,9 @@
  * Time: 下午4:47
  */
 
-namespace Qbhy\LBSCloud\Services;
+namespace Qbhy\LBSCloud\Services\LBS;
+
+use Qbhy\LBSCloud\Services\AbstractService;
 
 /**
  * Class RGCService

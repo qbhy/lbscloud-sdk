@@ -9,20 +9,18 @@ namespace Qbhy\LBSCloud;
 
 use Hanson\Foundation\Config;
 use Hanson\Foundation\Foundation;
-use Qbhy\LBSCloud\Services\GCService;
-use Qbhy\LBSCloud\Services\RGCService;
-use Qbhy\LBSCloud\Services\SearchService;
-use Qbhy\LBSCloud\Services\StorageService;
+use Qbhy\LBSCloud\Services;
 
 /**
  * Class LBSCloud
  *
- * @property Config         $config
- * @property Api            $api
- * @property SearchService  $search
- * @property StorageService $storage
- * @property GCService      $gc
- * @property RGCService     $rgc
+ * @property Config                         $config
+ * @property Api                            $api
+ * @property Services\LBS\SearchService     $search
+ * @property Services\LBS\StorageService    $storage
+ * @property Services\LBS\GCService         $gc
+ * @property Services\LBS\RGCService        $rgc
+ * @property Services\WebAPI\ConvertService $converter
  *
  * @package Qbhy\LBSCloud
  */

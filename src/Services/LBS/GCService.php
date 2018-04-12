@@ -5,7 +5,9 @@
  * Time: 下午4:47
  */
 
-namespace Qbhy\LBSCloud\Services;
+namespace Qbhy\LBSCloud\Services\LBS;
+
+use Qbhy\LBSCloud\Services\AbstractService;
 
 /**
  * Class GCService
@@ -19,7 +21,7 @@ class GCService extends AbstractService
 
     const VERSIONS = ['v1'];
 
-    const SERVICE = 'cloudgc'; // cloudgc
+    const SERVICE = 'cloudgc'; // 云地理编码服务
 
 
 }
