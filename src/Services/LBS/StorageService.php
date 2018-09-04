@@ -12,8 +12,8 @@ use Qbhy\LBSCloud\Services\AbstractService;
 /**
  * Class StorageService
  *
- * @link http://lbsyun.baidu.com/index.php?title=lbscloud/api/geodataV3
- * @link http://lbsyun.baidu.com/index.php?title=lbscloud/api/geodataV4
+ * @link    http://lbsyun.baidu.com/index.php?title=lbscloud/api/geodataV3
+ * @link    http://lbsyun.baidu.com/index.php?title=lbscloud/api/geodataV4
  * @package Qbhy\LBSCloud\Services
  */
 class StorageService extends AbstractService
@@ -39,6 +39,47 @@ class StorageService extends AbstractService
         $params = compact('name', 'geotype', 'is_published') + $params;
 
         return $this->request('post', 'geotable/create', $params);
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return mixed
+     */
+    public function tableDetail(int $id)
+    {
+        $params = compact('id');
+
+        return $this->request('get', 'geotable/detail', $params);
+    }
+
+    /**
+     * 更新表
+     *
+     * @param int   $id
+     * @param array $params
+     *
+     * @return mixed
+     */
+    public function tableUpdate(int $id, array $params = [])
+    {
+        $params = compact('id') + $params;
+
+        return $this->request('post', 'geotable/update', $params);
+    }
+
+    /**
+     * 删除表
+     *
+     * @param int $id
+     *
+     * @return mixed
+     */
+    public function tableDelete(int $id)
+    {
+        $params = compact('id');
+
+        return $this->request('post', 'geotable/delete', $params);
     }
 
     /**
@@ -72,7 +113,8 @@ class StorageService extends AbstractService
         int $coord_type,
         string $geotable_id,
         array $params = []
-    ) {
+    )
+    {
 
         $params = compact('latitude', 'longitude', 'coord_type', 'geotable_id') + $params;
 
@@ -92,7 +134,8 @@ class StorageService extends AbstractService
         int $coord_type,
         string $geotable_id,
         array $params = []
-    ) {
+    )
+    {
 
         $params = compact('coord_type', 'geotable_id') + $params;
 
@@ -112,7 +155,8 @@ class StorageService extends AbstractService
         int $id,
         string $geotable_id,
         array $params = []
-    ) {
+    )
+    {
 
         $params = compact('id', 'geotable_id') + $params;
 
@@ -132,7 +176,8 @@ class StorageService extends AbstractService
         int $id,
         string $geotable_id,
         array $params = []
-    ) {
+    )
+    {
 
         $params = compact('id', 'geotable_id') + $params;
 
@@ -152,7 +197,8 @@ class StorageService extends AbstractService
         int $id,
         string $geotable_id,
         array $params = []
-    ) {
+    )
+    {
 
         $params = compact('id', 'geotable_id') + $params;
 
