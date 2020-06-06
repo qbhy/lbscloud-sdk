@@ -14,12 +14,11 @@ use Qbhy\LBSCloud\Services;
 /**
  * Class LBSCloud
  *
- * @property Config                         $config
- * @property Api                            $api
- * @property Services\LBS\SearchService     $search
- * @property Services\LBS\StorageService    $storage
- * @property Services\LBS\GCService         $gc
- * @property Services\LBS\RGCService        $rgc
+ * @property Api $api
+ * @property Services\LBS\SearchService $search
+ * @property Services\LBS\StorageService $storage
+ * @property Services\LBS\GCService $gc
+ * @property Services\LBS\RGCService $rgc
  * @property Services\WebAPI\ConvertService $converter
  *
  * @package Qbhy\LBSCloud
@@ -30,4 +29,9 @@ class LBSCloud extends Foundation
         ServiceProvider::class,
         Services\ServiceProvider::class,
     ];
+
+    public function getAk()
+    {
+        return $this->getConfig('ak');
+    }
 }
