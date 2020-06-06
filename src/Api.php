@@ -47,7 +47,7 @@ class Api extends AbstractAPI
         $options = [$option_name => array_merge(static::$default_params, $params)];
 
         try {
-            $response = $this->getHttp()->request($url, $method, $options);
+            $response = $this->getHttp()->request($method, $url, $options);
         } catch (RequestException $exception) {
             $response = $exception->getResponse();
         }
