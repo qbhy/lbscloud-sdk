@@ -8,7 +8,7 @@
     }
   ],
   "require": {
-    "hanson/foundation-sdk": "^3.1",
+    "hanson/foundation-sdk": "^4.0",
     "php": ">=7.2",
     "ext-json": "*"
   },
