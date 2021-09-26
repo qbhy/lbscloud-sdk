@@ -13,6 +13,10 @@ use Hanson\Foundation\AbstractAPI;
 
 class Api extends AbstractAPI
 {
+    /**
+     * @var LBSCloud
+     */
+    protected $app;
 
     /** @var string 请求 ak */
     protected $ak;
@@ -26,7 +30,7 @@ class Api extends AbstractAPI
 
     public function __construct(LBSCloud $cloud)
     {
-        parent::__construct($cloud);
+        $this->app = $cloud;
         $this->ak = $cloud->getAk();
         static::$default_params = ['ak' => $this->ak];
     }
@@ -36,9 +40,10 @@ class Api extends AbstractAPI
         string $version,
         string $fn = '',
         string $method = 'GET',
-        array $params = []
-    ) {
-        $url = $this::API_HOST."/$service/$version/$fn";
+        array  $params = []
+    )
+    {
+        $url = $this::API_HOST . "/$service/$version/$fn";
 
         $method = strtolower($method);
 
